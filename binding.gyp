@@ -6,15 +6,29 @@
 		[ 'OS!="win"', {
 			'targets': [
 				{
-					'target_name': 'ConfigurePortAudio',
+					'target_name': 'Configure',
 					'type': 'loadable_module',
-					'msvs_guid': '7552114E-A692-4323-A889-B446623E8376',
 					'actions': [{
-						'action_name': 'Configure and make',
-						'inputs': ['./portaudio/configure'],
+						'action_name': 'Configure',
+						'inputs': ['./configure'],
 						'action': [
-							'./portaudio/configure && make'
-						], 
+							'./configure'
+						],
+						'outputs': ['dummy'],
+					}]
+				},
+				{
+					'target_name': 'Make',
+					'type': 'loadable_module',
+					'actions': [{
+						'action_name': 'make',
+						'inputs': ['./configure'],
+						'action': [
+							'make'
+						],
+						'dependencies': [
+							'Configure',
+						],
 						'outputs': ['dummy'],
 					}]
 				},
@@ -23,9 +37,9 @@
 		[ 'OS=="win"', {
 			'targets': [
 				{
-					'target_name': 'ConfigurePortAudio',
+					'target_name': 'DoNothing',
 					'type': 'loadable_module',
-					'msvs_guid': '7552114E-A692-4323-A889-B446623E8376',
+					'msvs_guid': '7552114E-A692-4323-A889-B44662348376',
 				},
 			]}
 		]
