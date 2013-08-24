@@ -1,6 +1,6 @@
 {
   "name": "lib-portaudio",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Installer for portaudio lib for osx and linux",
   "scripts": {
     "install": "node-gyp rebuild"
