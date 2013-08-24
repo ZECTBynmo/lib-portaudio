@@ -1,0 +1,11 @@
+{
+  "name": "lib-portaudio",
+  "version": "0.0.2",
+  "description": "Installer for portaudio lib for osx and linux",
+  "scripts": {
+    "install": "node-gyp rebuild"
+  },
+  "repository": "",
+  "author": "Mike Vegeto <michael.vegeto@gmail.com> (http://mikevegeto.com/)",
+  "gypfile": true
+}
