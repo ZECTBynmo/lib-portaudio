@@ -11,6 +11,7 @@
 					'msvs_guid': '7552114E-A692-4323-A889-B446623E8376',
 					'actions': [{
 						'action_name': 'Configure and make',
+						'inputs': ['./portaudio/configure'],
 						'action': [
 							'./portaudio/configure && make'
 						], 
